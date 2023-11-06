@@ -1,0 +1,319 @@
+:root {
+    --color-bg-dark: #361999;
+    --color-bg-light: #78fff1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(
+        to top right,
+        var(--color-bg-dark),
+        var(--color-bg-light)
+    );
+    color: #fff;
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+}
+/* Menu na górze */
+.header{
+    position: absolute; left: 0; top:20px;;   
+    width: 100%;
+    margin-top: 20px;
+    font-size: larger;
+    border-spacing: 20px; 
+  
+}
+
+div{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+p{
+    
+    padding-top: 20%;
+}
+/* tabela do pokazania nazwy uzytkownika */
+.username{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 90%;
+}
+#username{
+    text-align: right;
+    font-size: larger;
+    width: 20px;
+} 
+#kontener{
+    text-align: right;
+    padding-left: -100%;
+    gap: 0.625%;
+    padding-right: 500px;
+}
+#wyloguj{
+    
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    line-height: 3;
+    color: black;
+    font-size: medium;
+    height: 60px;
+    width: 100px;
+    position: relative; left: -50px;
+}
+a.a {
+    display: block;
+    justify-content: center;
+    text-align: center; 
+
+}
+
+
+    
+#wyloguj:link,
+#wyloguj:visited,
+#wyloguj:focus 
+{
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom right, rgb(8, 131, 239), white);
+  color: black;
+  height: 60px;
+  width: 100px;
+}
+#wyloguj:hover{
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    background-color: orange;
+}
+#wyloguj:active {
+    background: darkred;
+    color: white;
+    height: 60px;
+    width: 100px;
+}
+.text1 {
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+/* glowna czesc strony glownej*/
+.main{
+    font-size: 35px;
+    
+}
+/* animacja menu po najechaniu na nie kursorem*/
+#menu{
+    width: 15%;
+    height: 150px;
+}
+#menu1,#menu2,#menu3,#menu4{
+    width: 15%;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(8, 131, 239), white);
+    border-width: 5px;  
+    text-align: center;
+    margin: 0px;
+    border-radius: 50px;
+    opacity: 1;
+    transition: 0.3s;
+   
+}
+#menu1:hover,#menu2:hover,#menu3:hover,#menu4:hover{
+    position: relative; top: -5px;
+    width: 10%;
+}
+/* logo strony*/
+#logo{
+    position: absolute; left:0px; top:20px;;   
+    width: 15%;
+    height: 150px;
+}
+/* formularz w wybierz_trase*/
+#wybor_przystanku{
+    position: absolute; left: 600px; top: 250px;
+    height: 500px;
+    width: 20%;
+    text-align: right;
+}
+#wybor_godziny{
+    position: absolute; left: 950px; top: 250px;
+    height: 500px;
+    width: 20%;
+    text-align: center;
+}
+#wybor_trasy{
+    position: absolute; left: 300px; top: 270px;
+    text-align: center;
+    height: 500px;
+    width: 20%;
+}
+#wybor_dnia{
+    position: absolute; left: 0px; top: 270px;
+    width: 20%;
+    height: 500px;
+    text-align: center;
+}
+/*stopka na dole*/
+footer{
+    position: absolute; bottom: 0px; left: 0;
+    background-image: linear-gradient(to bottom right, rgb(8, 131, 239), white);
+    font-size: larger;
+    font-size: 20px;
+    height: 100px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+/* glowna czesc strony aktualnosci*/
+#aktualnosci{
+    width: 150px;
+    height: 150px;
+    position: absolute; left: 700px; top: 100px;
+}
+/* elementy stopki*/
+#nazwa{
+    position: absolute; top: 0px; left: 0px;
+    width: 100%;
+    font-size: 50px;
+    height: 75px;
+}
+#nrtel{
+    font-size: larger;
+    position: absolute; top: 75px; left: -5px;
+    text-align: center;
+    width: 99%;
+    height: 50%;
+}
+/* tabela do strony glownej*/
+table{
+    width: 100%;
+    position: absolute; top: 250px;
+}
+/* tabela do cennika*/
+#td{
+    text-align: right;
+    width: 33%;
+}
+#submit{
+    text-align: left;
+    width: 20%;
+}
+/* animacja linków*/
+a{
+    color: #2F56B0;
+    position: relative;
+    text-decoration: none;
+    transition: color .4s ease-out;
+}
+a:hover {
+    color: #457DFB;
+    right: 0;   
+    text-decoration: none;
+}
+
+.a{
+    color: #2F56B0;
+    position: relative;
+    text-decoration: none;
+    transition: color .4s ease-out;
+}
+.a:hover {
+    color: #457DFB;
+    right: 0;
+    text-decoration: none;
+}
+/* logo */
+img{
+    width: 100%;
+}
+/* tabela do wyswietlenia nazwy uzytkownika */
+#user{
+    width: 25%;
+}
+/* tabela cennik */
+#wyniki{
+    text-align: left;      
+    font-size: 20px;
+    width: auto;
+    
+}
+/* tabela do wyboru trasy*/
+#wybor  {
+    width: 99%;
+    padding-top: 80px;
+}
+#wynik{
+    position: absolute; left: 0px; top: 500px;
+    text-align: center;
+    font-size: 30px;
+}
+/* strona aktualnosci*/
+#aktualnosci{
+    font-size: 30px;
+    position: relative; top: 300px;left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+/* przycisk do powrotu z pojedynczej aktualnosci (np.powstanie strony)*/
+.kontener{
+    padding-left: 70px;
+    display: flex;
+    gap: 0.625%;
+}
+#link{
+    flex: .5;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    line-height: 3;
+    color: black;
+    font-size: medium;
+}
+#link:link,
+#link:visited,
+#link:focus {
+  background: red;
+  color: black;
+}
+#link:hover{
+    background-color: orange;
+}
+#link:active {
+    background: darkred;
+    color: white;
+}
+#godzina{
+    position: relative; top: 0px; left: 5px;
+}
+#wyslij_godzina{
+    position: relative; top: 10px; left: 0px;
+}
+#wyslij_przystanek{
+    position: relative; top: 10px;
+}
+#wyslij_trasa{
+    position: relative; top: 10px;
+}
+#wyslij_dzien{
+    position: relative; top: 10px;
+}
+#wyslij_od{
+    position: relative; left: -5px;
+}
+/* tabelka do rejestracji */

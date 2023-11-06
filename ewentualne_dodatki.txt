@@ -1,0 +1,38 @@
+// wybór dnia (niedokończony)
+                <td style="width: 12%; position: relative; top: 10px;>
+                <?php
+                // lączenie z bazą danych
+                    $servername = "localhost";
+                    $adminName = "kacper";
+                    $password = "123";
+                    $dbName = 'autobusy';
+
+                    $conn = mysqli_connect($servername, $adminName,$password, $dbName); 
+                    // zbieranie danych na pierwsze pytanie
+                    if ($_SERVER["REQUEST_METHOD"] == "POST")
+                    {
+                        $dzien = $_POST["weekday"];
+                        
+                        $dzien = mysqli_real_escape_string($conn, $dzien);
+
+                    }
+                ?>
+                    <form action="wybor_trasy.php" method="post">
+                        <label for="weekday">Wybierz dzień tygodnia</label>
+                            <select name="wybor_dzien" id="wybor_dzien">
+                                <option value="poniedziałek">Poniedziałek</option>
+                                <option value="wtorek">Wtorek</option>
+                                <option value="sroda">Środa</option>
+                                <option value="czwartek">Czwartek</option>
+                                <option value="piatek">Piątek</option>
+                            </select>
+                    </form>   
+                </td>
+                <td>
+                    <br>
+                    <input id="wyslij_dzien" type="submit">
+                </td>
+
+
+// trzeba dokończyć wybory tras tak żeby dane do selecta szły z bazy danych a nie z HTMLa. Jakbyś chciał to zrobić to będzie miło,
+// a jak nie to spróbujemy to zrobić po praktykach (ewentaulnie damy flisowi zeby to zrobil xd)
