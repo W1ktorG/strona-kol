@@ -81,7 +81,7 @@ include 'laczenie.php';
                     <a id="link" href="aktualnosci.php">Powrót</a>
                 </nav>
             </td>
-            <td width="40%">
+            <td class="text2" width="40%">
                 <br>
                 19.09.2023 - rozpoczęła się oficjalna praca nad stroną Autobook! Prace potrwają maksymalnie do 11.11.2023. 
                 Wtedy będzie można się zarejestrować.

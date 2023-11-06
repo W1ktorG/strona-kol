@@ -59,11 +59,9 @@
             <div class="bg__dot"></div>
         </div>
     <table id="rejestracja">
-    
+    <div class="form__spacer" aria-hidden="true"></div>
         <tr id="mlyn">
-       
             <td>
-            <div class="form__spacer" aria-hidden="true"></div>
             <div class="form__input-container">
                 <input
                     aria-label="User"
@@ -74,6 +72,7 @@
                     placeholder=" "
                 />
                 <label class="form__input-label" for="emailInput">Username</label>
+                    
             </div>
             </td>
            
@@ -106,7 +105,6 @@
                     placeholder=" "
                 />
                 <label class="form__input-label" for="passwordRepeat">Confirm Password</label>
-                
             </div>
             </td>
             

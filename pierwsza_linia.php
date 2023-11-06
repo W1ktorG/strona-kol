@@ -82,7 +82,7 @@ include 'laczenie.php';
                     <a id="link" href="aktualnosci.php">Powrót</a>
                 </nav>
             </td>
-            <td width="40%">
+            <td class="text2" width="40%">
                 <br>
                 3.10.2023 została dodana linia autobusowa: Sycow-Ostrzeszow, która jest pierwszą trasą jaką będzie można zarezerwować sobie miejsce
                 na Autobooku! Otwarcie strony za nie wiele ponad miesiąc 😎

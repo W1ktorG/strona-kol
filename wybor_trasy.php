@@ -80,28 +80,10 @@ include 'laczenie.php';
                         <label for="trasa">Miasto startu</label>
                             <select name="wybor" id="trasa">
 
-                            <?php
-                            // szczerze próbowałem tutaj wszystkiego i nic nie działało więc może ty coś znajdziesz
-
-                            
-                            // zbieranie danych na pierwsze pytanie
-                            if (isset($_GET['submit']))
-                            {
-                                $trasa = $_GET["trasa"];
-                                $wybor = $_GET["wybor"];
-                                // wydobywanie informacji z bazy
-                                    $query = "SELECT * FROM miejscowosci WHERE id >= '1' AND id <= '3';";
-                                    $result = mysqli_query($conn,$query);
-                                    while($row = $result->fetch_assoc()){
-                                        
-                                        echo "<option value=".$row["nazwa_miejscowosci"]."></option>";                                   
-                                    }
-                            }
-                            ?>
-                    <!--            <option value="1">Syców</option>
+                                <option value="1">Syców</option>
                                 <option value="2">Ostrzeszów</option>
                                 <option value="3">Kępno</option>
--->
+
                             </select>
                     </td>
                     <td>
@@ -112,56 +94,17 @@ include 'laczenie.php';
                                 <form action="wybor_trasy.php" method="post">
                                     <label for="trasa2">Miasto końca</label>
                                     <select name="wybor2" id="trasa">
+                                        <option value="1">Syców</option>
+                                        <option value="2">Ostrzeszów</option>
+                                        <option value="3">Kępno</option>
 
-                                    <?php
-                                    $conn = mysqli_connect($servername, $adminName,$password, $dbName); 
-                                    // zbieranie danych na pierwsze pytanie
-                                    if (isset($_POST['submit'])){
-
-                                        $trasa2 = $_POST["trasa2"];
-                                        $wybor2 = $_POST["wybor2"];
-                                        // wydobywanie informacji z bazy
-                                
-                                        $query = "SELECT * FROM miejscowosci WHERE id >= '1' AND id <= '3'";
-                                        $result = mysqli_query($conn,$query);
-                                        while($row = $result->fetch_assoc()){
-                                            echo "<option value=".$row["id"]."></option>";                                   
-                                        }
-                                      //  echo "<input id=wyslij_trasa type=submit required>";
-                                    }
-                            ?>
 
                             </td>
                             <td>
                                 <br>
                                 <input id="wyslij_do" type="submit">
                             </td>
-                            <?php
-                            /*
-                // lączenie z bazą danych
-                    $servername = "localhost";
-                    $adminName = "kacper";
-                    $password = "123";
-                    $dbName = 'autobusy';
 
-                    $conn = mysqli_connect($servername, $adminName,$password, $dbName); 
-                    // zbieranie danych na pierwsze pytanie
-                    if (isset($_POST['submit']))
-                    {
-                        
-                        // wydobywanie informacji z bazy
-                        if($trasa2 == "1" || $trasa2 == "2"){
-                            $query = "SELECT * FROM przystanki WHERE id >= '1' AND id <= '15'";
-                            $result = mysqli_query($conn,$query);
-
-                        }elseif($trasa2 == "3" || $trasa2 == "4"){
-                            $query = "SELECT * FROM przystanki WHERE id >='16' AND id ='28'";
-                            $result = mysqli_query($conn,$query);
-                        }
-
-                    }
-                    */
-                ?>
                     </form>
                 </td>
 
@@ -185,41 +128,7 @@ include 'laczenie.php';
                                 <option value="13">Ostrzeszów ul. Łąkowa</option>
                                 <option value="14">Ostrzeszów ul. Powstańców Wlkp.</option>
                                 <option value="15">Ostrzeszów ul. Kaliska</option>
-                                <?php
-                                    if($trasa == "1" || $trasa == "2"){
-                                    $query = "SELECT * FROM przystanki WHERE id >= '1' AND id <= '15'";
-                                    $result = mysqli_query($conn,$query);
-
-                                    while($row = $result->fetch_assoc()){
-                                        echo "<option value=".$row["id_przystanku"].">".$row["nazwa_przystanku"]."</option>";
-                                    }
-                                    
-                                    }elseif($trasa == "3" || $trasa == "4"){
-                                    $query = "SELECT * FROM przystanki WHERE id >='14' AND id ='28'";
-                                    $result = mysqli_query($conn,$query);
-                                    while($row = $result->fetch_assoc()){
-                                        echo "<option value=".$row["id_przystanku"].">".$row["nazwa_przystanku"]."</option>";
-                                    }
-                                    }
-
-                                ?>
-            <!--                <option value="1">Syców Dworzec</option>
-                                <option value="2">Syców targowisko</option>
-                                <option value="3">Syców osiedle</option>
-                                <option value="4">Pisarzowice</option>
-                                <option value="5">Bałdowice</option>
-                                <option value="6">Mąkoszyce</option>
-                                <option value="7">Ligota</option>
-                                <option value="8">Kobyla Góra Centrum</option>
-                                <option value="9">Kobyla Góra osiedle</option>
-                                <option value="10">Bierzów</option>
-                                <option value="11">Rojów</option>
-                                <option value="12">Ostrzeszów ul. Przemysłowa</option>
-                                <option value="13">Ostrzeszów ul. Łąkowa</option>
-                                <option value="14">Ostrzeszów ul. Powstańców Wlkp.</option>
-                                <option value="15">Ostrzeszów ul. Kaliska</option>
                                 
-                -->
                             </select>
 
                     </form>
